@@ -1,0 +1,51 @@
++---------------------------------------------------------------------------+
+|  Time statistics                                                          |
++---------------------------------------------------------------------------+
+|             Selection: sum=0.174123380000 s; mean=0.000493267365 s        |
+|              Altering: sum=0.207369442000 s; mean=0.000587448844 s        |
+|   Fitness calculation: sum=137.900463249000 s; mean=0.390652870394 s      |
+|     Overall execution: sum=138.468148416000 s; mean=0.392261043671 s      |
++---------------------------------------------------------------------------+
+|  Evolution statistics                                                     |
++---------------------------------------------------------------------------+
+|           Generations: 353                                                |
+|               Altered: sum=11,340; mean=32.124645892                      |
+|                Killed: sum=0; mean=0.000000000                            |
+|              Invalids: sum=0; mean=0.000000000                            |
++---------------------------------------------------------------------------+
+|  Population statistics                                                    |
++---------------------------------------------------------------------------+
+|                   Age: max=10; mean=0.872748; var=1.836140                |
+|                Fitness                                                    |
+|                       min = main.MainGACustom$FitnessResult@1ff4931d      |
+|                       max = main.MainGACustom$FitnessResult@65e98b1c      |
++---------------------------------------------------------------------------+
+=> populationSize: 25  (offspringFraction: 0.6)
+=> mutationProbability: 0.05
+=> crossoverProbability: 	(0.8)
+------------------------------------------------------------------------------------------
+Evaluations: 5022
+------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------
+Results on test set (50 traces)
+------------------------------------------------------------------------------------------
+
+=> DriveDown: Precision: 1.00000  Recall: 0.98000		(Missed: [DriveDown;2023-03-21T08:30:26.944])
+=> HalfRelease: Precision: 0.98000  Recall: 0.98000		(Missed: [HalfRelease;2023-03-20T16:18:21.103])
+=> Retrieve: Precision: 1.00000  Recall: 1.00000		(Missed: [])
+=> PickUp: Precision: 0.98000  Recall: 0.98000		(Missed: [PickUp;2023-03-20T15:53:23.370])
+=> DepositRed: Precision: 0.89286  Recall: 0.89286		(Missed: [DepositRed;2023-03-20T15:32:53.817, DepositRed;2023-03-21T08:26:03.555, DepositRed;2023-03-21T08:27:39.391])
+=> FullRelease: Precision: 0.98000  Recall: 0.98000		(Missed: [FullRelease;2023-03-20T15:56:38.695])
+=> RetrieveGrip: Precision: 1.00000  Recall: 1.00000		(Missed: [])
+=> ReleaseRed: Precision: 1.00000  Recall: 0.92857		(Missed: [ReleaseRed;2023-03-20T15:39:17.563, ReleaseRed;2023-03-21T08:27:41.358])
+=> ReleaseGreen: Precision: 1.00000  Recall: 0.90909		(Missed: [ReleaseGreen;2023-03-21T08:08:15.258, ReleaseGreen;2023-03-21T08:19:21.568])
+=> Lift: Precision: 0.98000  Recall: 0.98000		(Missed: [Lift;2023-03-20T16:01:17.835])
+=> Park: Precision: 0.76000  Recall: 0.76000		(Missed: [Park;2023-03-20T15:30:13.272, Park;2023-03-20T15:56:33.511, Park;2023-03-20T16:09:07.597, Park;2023-03-20T16:10:46.501, Park;2023-03-20T16:18:19.808, Park;2023-03-21T08:09:32.108, Park;2023-03-21T08:10:19.561, Park;2023-03-21T08:21:03.760, Park;2023-03-21T08:28:08.703, Park;2023-03-21T08:29:00.141, Park;2023-03-21T14:59:51.979, Park;2023-03-21T15:02:54.688])
+=> Idle: Precision: 1.00000  Recall: 1.00000		(Missed: [])
+=> DepositGreen: Precision: 1.00000  Recall: 1.00000		(Missed: [])
+=> Wait: Precision: 1.00000  Recall: 1.00000		(Missed: [])
+
+Precision (avg): 0.96949
+Recall (avg): 0.95647
+F-measure (avg): 0.96272

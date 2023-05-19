@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+	xmlns:xmi="http://www.omg.org/XMI"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+	xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
+	modelDirectory="/EMISA_Xtend/src-gen" creationIcons="false"
+	editDirectory="/EMISA_Xtend.edit/src-gen"
+	editorDirectory="/EMISA_Xtend.editor/src-gen"
+	modelPluginID="EMISA_Xtend" modelName="EMISA_Xtend"
+	rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+	codeFormatting="true" importerID="org.eclipse.emf.importer.ecore"
+	complianceLevel="10.0" copyrightFields="false"
+	operationReflection="true" importOrganizing="true">
+	<foreignModel>eMISA_Xtend.ecore</foreignModel>
+	<testsDirectory xsi:nil="true" />
+	<genPackages prefix="EMISA_Xtend"
+		disposableProviderFactory="true" ecorePackage="eMISA_Xtend.ecore#/">
+		<genClasses ecoreClass="eMISA_Xtend.ecore#//Block">
+			<genFeatures property="None" children="true"
+				createChild="true"
+				ecoreFeature="ecore:EReference eMISA_Xtend.ecore#//Block/statemachine" />
+			<genFeatures property="None" children="true"
+				createChild="true"
+				ecoreFeature="ecore:EReference eMISA_Xtend.ecore#//Block/property" />
+		</genClasses>
+		<genClasses ecoreClass="eMISA_Xtend.ecore#//StateMachine">
+			<genFeatures property="None" children="true"
+				createChild="true"
+				ecoreFeature="ecore:EReference eMISA_Xtend.ecore#//StateMachine/state" />
+			<genFeatures property="None" children="true"
+				createChild="true"
+				ecoreFeature="ecore:EReference eMISA_Xtend.ecore#//StateMachine/transition" />
+		</genClasses>
+		<genClasses ecoreClass="eMISA_Xtend.ecore#//System">
+			<genFeatures property="None" children="true"
+				createChild="true"
+				ecoreFeature="ecore:EReference eMISA_Xtend.ecore#//System/block" />
+		</genClasses>
+		<genClasses image="false"
+			ecoreClass="eMISA_Xtend.ecore#//NamedElement">
+			<genFeatures createChild="false"
+				ecoreFeature="ecore:EAttribute eMISA_Xtend.ecore#//NamedElement/name" />
+		</genClasses>
+		<genClasses ecoreClass="eMISA_Xtend.ecore#//Property">
+			<genFeatures children="true" createChild="true"
+				propertySortChoices="true"
+				ecoreFeature="ecore:EReference eMISA_Xtend.ecore#//Property/tolerance" />
+		</genClasses>
+		<genClasses ecoreClass="eMISA_Xtend.ecore#//State">
+			<genFeatures notify="false" createChild="false"
+				propertySortChoices="true"
+				ecoreFeature="ecore:EReference eMISA_Xtend.ecore#//State/incoming" />
+			<genFeatures notify="false" createChild="false"
+				propertySortChoices="true"
+				ecoreFeature="ecore:EReference eMISA_Xtend.ecore#//State/outgoing" />
+			<genFeatures property="None" children="true"
+				createChild="true"
+				ecoreFeature="ecore:EReference eMISA_Xtend.ecore#//State/assignment" />
+			<genFeatures createChild="false"
+				ecoreFeature="ecore:EAttribute eMISA_Xtend.ecore#//State/isInitial" />
+		</genClasses>
+		<genClasses ecoreClass="eMISA_Xtend.ecore#//Transition">
+			<genFeatures notify="false" createChild="false"
+				propertySortChoices="true"
+				ecoreFeature="ecore:EReference eMISA_Xtend.ecore#//Transition/successor" />
+			<genFeatures notify="false" createChild="false"
+				propertySortChoices="true"
+				ecoreFeature="ecore:EReference eMISA_Xtend.ecore#//Transition/predecessor" />
+		</genClasses>
+		<genClasses ecoreClass="eMISA_Xtend.ecore#//Assignment">
+			<genFeatures notify="false" createChild="false"
+				propertySortChoices="true"
+				ecoreFeature="ecore:EReference eMISA_Xtend.ecore#//Assignment/property" />
+			<genFeatures createChild="false"
+				ecoreFeature="ecore:EAttribute eMISA_Xtend.ecore#//Assignment/value" />
+		</genClasses>
+		<genClasses ecoreClass="eMISA_Xtend.ecore#//ToleranceRange">
+			<genFeatures createChild="false"
+				ecoreFeature="ecore:EAttribute eMISA_Xtend.ecore#//ToleranceRange/value" />
+		</genClasses>
+	</genPackages>
+</genmodel:GenModel>

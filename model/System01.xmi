@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eMISA_Xtend:System xmi:version="2.0"
+	xmlns:xmi="http://www.omg.org/XMI"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:eMISA_Xtend="http://www.example.org/eMISA_Xtend"
+	xsi:schemaLocation="http://www.example.org/eMISA_Xtend ../model/eMISA_Xtend.ecore"
+	name="automatedSystem">
+	<block name="roboticArm">
+		<statemachine name="Workflow">
+			<state name="DriveDown"
+				outgoing="//@block.0/@statemachine/@transition.0" isInitial="true">
+				<assignment property="//@block.0/@property.2" value="1.5" />
+			</state>
+			<state name="PickUp"
+				incoming="//@block.0/@statemachine/@transition.0">
+				<assignment property="//@block.0/@property.2"
+					value="-0.4" />
+			</state>
+			<transition successor="//@block.0/@statemachine/@state.1"
+				predecessor="//@block.0/@statemachine/@state.0" />
+		</statemachine>
+		<property name="bp" />
+		<property name="map" />
+		<property name="gp">
+			<tolerance value="0.02" />
+		</property>
+		<property name="sap" />
+		<property name="wp" />
+	</block>
+</eMISA_Xtend:System>

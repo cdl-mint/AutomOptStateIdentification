@@ -1,0 +1,39 @@
+module workflow
+
+import org.eclipse.emf.mwe.utils.*
+
+// TODO use second project as target dir, if possible
+
+var modelPath = "modelTest"
+var targetDir = "src-gen_xtend"
+var slotID = "someUniqueSlotID"
+
+Workflow {
+
+	bean = StandaloneSetup {
+		registerGeneratedEPackage = "eMISA_Xtend.EMISA_XtendPackage"
+	}
+
+	component = DirectoryCleaner {
+		directory = targetDir
+	}
+
+	component = xtend.SystemCodeGeneratorSupport {}
+	
+	component = org.eclipse.xtext.mwe.Reader {
+        path = modelPath
+        register = xtend.SystemCodeGeneratorSetup {}
+        loadResource = {
+            slot = slotID
+        }
+    }
+	
+	component = org.eclipse.xtext.generator.GeneratorComponent {
+		register = xtend.SystemCodeGeneratorSetup {}
+		slot = slotID
+		outlet = {
+			path = targetDir
+		}
+	}
+
+}

@@ -1,0 +1,51 @@
++---------------------------------------------------------------------------+
+|  Time statistics                                                          |
++---------------------------------------------------------------------------+
+|             Selection: sum=0.017796118000 s; mean=0.000050413932 s        |
+|              Altering: sum=0.045324702000 s; mean=0.000128398589 s        |
+|   Fitness calculation: sum=140.684223959000 s; mean=0.398538878071 s      |
+|     Overall execution: sum=140.837256639000 s; mean=0.398972398411 s      |
++---------------------------------------------------------------------------+
+|  Evolution statistics                                                     |
++---------------------------------------------------------------------------+
+|           Generations: 353                                                |
+|               Altered: sum=11,373; mean=32.218130312                      |
+|                Killed: sum=0; mean=0.000000000                            |
+|              Invalids: sum=0; mean=0.000000000                            |
++---------------------------------------------------------------------------+
+|  Population statistics                                                    |
++---------------------------------------------------------------------------+
+|                   Age: max=9; mean=0.827649; var=1.557667                 |
+|                Fitness                                                    |
+|                       min = main.MainGACustom$FitnessResult@3246fb96      |
+|                       max = main.MainGACustom$FitnessResult@2e222612      |
++---------------------------------------------------------------------------+
+=> populationSize: 25  (offspringFraction: 0.6)
+=> mutationProbability: 0.05
+=> crossoverProbability: 	(0.8)
+------------------------------------------------------------------------------------------
+Evaluations: 5017
+------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------
+Results on test set (50 traces)
+------------------------------------------------------------------------------------------
+
+=> DriveDown: Precision: 0.98000  Recall: 0.98000		(Missed: [DriveDown;2023-03-20T16:09:46.646])
+=> HalfRelease: Precision: 0.84000  Recall: 0.84000		(Missed: [HalfRelease;2023-03-20T15:30:14.589, HalfRelease;2023-03-20T15:43:38.464, HalfRelease;2023-03-20T15:54:15.412, HalfRelease;2023-03-20T16:09:08.898, HalfRelease;2023-03-20T16:18:21.103, HalfRelease;2023-03-21T08:21:05.061, HalfRelease;2023-03-21T08:29:01.377, HalfRelease;2023-03-21T15:02:10.454])
+=> Retrieve: Precision: 0.83019  Recall: 0.88000		(Missed: [Retrieve;2023-03-20T15:40:44.997, Retrieve;2023-03-20T15:51:17.923, Retrieve;2023-03-20T15:52:47.606, Retrieve;2023-03-21T08:19:11.164, Retrieve;2023-03-21T08:26:43.369, Retrieve;2023-03-21T08:29:10.549])
+=> PickUp: Precision: 0.88000  Recall: 0.88000		(Missed: [PickUp;2023-03-20T15:32:31.042, PickUp;2023-03-20T15:53:23.370, PickUp;2023-03-20T15:59:37.780, PickUp;2023-03-21T08:09:25.589, PickUp;2023-03-21T08:12:44.324, PickUp;2023-03-21T08:24:04.018])
+=> DepositRed: Precision: 0.89286  Recall: 0.89286		(Missed: [DepositRed;2023-03-20T15:32:53.817, DepositRed;2023-03-21T08:26:03.555, DepositRed;2023-03-21T08:27:39.391])
+=> FullRelease: Precision: 0.92000  Recall: 0.92000		(Missed: [FullRelease;2023-03-20T15:52:42.438, FullRelease;2023-03-20T15:56:38.695, FullRelease;2023-03-21T08:27:28.322, FullRelease;2023-03-21T08:28:13.855])
+=> RetrieveGrip: Precision: 0.98000  Recall: 0.98000		(Missed: [RetrieveGrip;2023-03-21T08:30:03.508])
+=> ReleaseRed: Precision: 1.00000  Recall: 1.00000		(Missed: [])
+=> ReleaseGreen: Precision: 0.90909  Recall: 0.90909		(Missed: [ReleaseGreen;2023-03-20T15:54:32.913, ReleaseGreen;2023-03-21T08:31:44.044])
+=> Lift: Precision: 0.98000  Recall: 0.98000		(Missed: [Lift;2023-03-20T16:01:17.835])
+=> Park: Precision: 0.94000  Recall: 0.94000		(Missed: [Park;2023-03-20T16:18:19.808, Park;2023-03-21T08:28:08.703, Park;2023-03-21T08:29:00.141])
+=> Idle: Precision: 1.00000  Recall: 1.00000		(Missed: [])
+=> DepositGreen: Precision: 0.95455  Recall: 0.95455		(Missed: [DepositGreen;2023-03-20T15:54:30.312])
+=> Wait: Precision: 1.00000  Recall: 1.00000		(Missed: [])
+
+Precision (avg): 0.93619
+Recall (avg): 0.93975
+F-measure (avg): 0.93792

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eMISA_Xtend:System xmi:version="2.0"
+	xmlns:xmi="http://www.omg.org/XMI"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:eMISA_Xtend="http://www.example.org/eMISA_Xtend"
+	xsi:schemaLocation="http://www.example.org/eMISA_Xtend eMISA_Xtend.ecore"
+	name="AutomatedSystem">
+	<block name="roboticArm">
+		<statemachine name="Workflow">
+			<state name="DriveDown"
+				outgoing="//@block.0/@statemachine/@transition.0" isInitial="true">
+				<assignment property="//@block.0/@property.2" value="1.5" />
+				<assignment property="//@block.0/@property.0" />
+				<assignment property="//@block.0/@property.1" value="1.5" />
+				<assignment property="//@block.0/@property.3"
+					value="-0.12" />
+				<assignment property="//@block.0/@property.4" />
+			</state>
+			<state name="PickUp"
+				incoming="//@block.0/@statemachine/@transition.0">
+				<assignment property="//@block.0/@property.2"
+					value="-0.4" />
+				<assignment property="//@block.0/@property.0" />
+				<assignment property="//@block.0/@property.1" value="1.5" />
+				<assignment property="//@block.0/@property.3"
+					value="-0.12" />
+				<assignment property="//@block.0/@property.4" />
+			</state>
+			<transition successor="//@block.0/@statemachine/@state.1"
+				predecessor="//@block.0/@statemachine/@state.0" />
+		</statemachine>
+		<property name="bp">
+			<tolerance value="0.01" />
+		</property>
+		<property name="map">
+			<tolerance value="0.01" />
+		</property>
+		<property name="gp">
+			<tolerance value="0.01" />
+		</property>
+		<property name="sap">
+			<tolerance value="0.01" />
+		</property>
+		<property name="wp">
+			<tolerance value="0.01" />
+		</property>
+	</block>
+</eMISA_Xtend:System>
