@@ -6,8 +6,17 @@ This repository contains artifacts and evaluation data related to the submission
 
 Artifacts are deposited as follows:
 
+- Source code: **[src](src)**
 - Raw sensor data + Reference files: **[lib](lib)**
 - System models (BDD + SM): **[model](model)**
 - Evaluation results 
     - summary statistics, plots, logs: **[submission_results/<case>](submission_results)**
     - significance tests: **[submission_results/tests](submission_results/tests)**
+    
+### Run experiment
+
+The execution of HS and GA with their parameters is setup in **src/main/MainHS** and **src/main/MainGA**, respectively. For Random Search, the HS algorithm can be used using memory size = 1 and acceptance rate = 0.0.
+
+### Requirements
+    
+All experiments were run using Eclipse Modeling Tools 2023/03 (4.27.0) and Java 14.
